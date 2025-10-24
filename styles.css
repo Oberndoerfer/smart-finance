@@ -139,3 +139,12 @@ input,textarea{width:100%;padding:.6rem;border:1px solid #dfe6ee;border-radius:6
     left: -2rem;
   }
 }
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* rund */
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
