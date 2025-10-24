@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meine Website</title>
+  <meta name="description" content="Moderne, responsive Starter-Website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">MeineSite</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Menü">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Leistungen</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#about">Über</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Willkommen auf meiner Website</h1>
+        <p>Klar. Schnell. Responsiv. Perfekt als Ausgangspunkt für dein Projekt.</p>
+        <a class="btn" href="#contact">Kontakt aufnehmen</a>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h2>Unsere Leistungen</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Design</h3>
+          <p>Klares Layout, typografisch abgestimmt und mobil-optimiert.</p>
+        </article>
+        <article class="card">
+          <h3>Entwicklung</h3>
+          <p>Sauberer HTML/CSS/JS-Code, leicht erweiterbar.</p>
+        </article>
+        <article class="card">
+          <h3>Deployment</h3>
+          <p>Hilfe beim Hochladen auf GitHub Pages oder Netlify.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h2>Galerie</h2>
+      <div class="grid gallery-grid">
+        <img src="https://via.placeholder.com/600x400?text=Bild+1" alt="Beispielbild 1" />
+        <img src="https://via.placeholder.com/600x400?text=Bild+2" alt="Beispielbild 2" />
+        <img src="https://via.placeholder.com/600x400?text=Bild+3" alt="Beispielbild 3" />
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>Über uns</h2>
+      <p>Kurzer Text über dich / dein Unternehmen. Ersetze diesen Platzhalter durch deine eigene Beschreibung.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Kontakt</h2>
+      <!-- Option A: Formspree (empfohlen für statische Sites) -->
+      <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          E-Mail
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Nachricht
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button type="submit" class="btn">Senden</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+
+      <p class="or">oder</p>
+
+      <!-- Option B: mailto fallback -->
+      <p>Schreibe uns direkt: <a href="mailto:mail@example.com">mail@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MeineSite — Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
