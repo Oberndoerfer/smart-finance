@@ -1,42 +1,42 @@
-// script.js - kleines Verhalten: Jahr anzeigen, mobile Menü, Formular-Feedback
-document.addEventListener('DOMContentLoaded', function(){
-  // Jahr im Footer
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('main-nav');
-  navToggle && navToggle.addEventListener('click', function(){
-    nav.classList.toggle('open');
-    const open = nav.classList.contains('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+// Smooth Scroll für Navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
   });
+});
 
-  // Formular: client-side minimal validation + Formspree feedback
-  const form = document.getElementById('contact-form');
-  if(form){
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-      const statusEl = form.querySelector('.form-status');
-      statusEl.textContent = 'Sende…';
-      const data = new FormData(form);
-      // POST to Formspree (change action in HTML to your Formspree endpoint)
-      try{
-        const resp = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if(resp.ok){
-          statusEl.textContent = 'Danke — Nachricht gesendet.';
-          form.reset();
-        } else {
-          const json = await resp.json();
-          statusEl.textContent = json?.error || 'Fehler beim Senden. Bitte versuche es später.';
-        }
-      }catch(err){
-        statusEl.textContent = 'Netzwerkfehler. Bitte überprüfe deine Verbindung.';
-      }
-    });
-  }
+// Fade-In Effekt für Abschnitte
+const sections = document.querySelectorAll('.container');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Optional: Aktuellen Menüpunkt markieren
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 60;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
 });
