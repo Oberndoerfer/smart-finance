@@ -1,171 +1,32 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Meine Website</title>
-  <meta name="description" content="Moderne, responsive Starter-Website" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">MeineSite</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Menü">
-        <span class="hamburger"></span>
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Leistungen</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#about">Über</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <h1>Herzlich Willkommen auf meiner Website</h1>
-         <h1>Prof. Dr. Markus Oberndörfer</h1>
-        <p>Ihr Ansprechpartner für Finanzen, Versicherungen und Steuern</p>
-        <a class="btn" href="#contact">Kontakt aufnehmen</a>
-      </div>
-    </section>
-
-    <section id="services" class="container services">
-      <h2>Meine Leistungen</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Vorträge & Seminare buchen</h3>
-          <p>u.a. Altersarmut, Finanzplanung, Steueroptimierung</p>
-        </article>
-        <article class="card">
-          <h3>Private Krankenversicherung</h3>
-          <p>Sie sind selbständig, verbeamtet oder angestellt und wollen Geld sparen? Dann kontaktieren Sie mich unbedingt!</p>
-        </article>
-        <article class="card">
-          <h3>Steueroptimierung</h3>
-          <p>Neugestaltung Ihrer Steuersituation sowie Hilfestellung beim Erstellen Ihrer Steuererklärung</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="gallery" class="container gallery">
-      <h2>Galerie</h2>
-      <div class="grid gallery-grid">
-        <<img src="https://github.com/Oberndoerfer/smart-finance/blob/main/profil.jpg" alt="Mein Profilbild" class="profile-img">
-      </div>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>Über uns</h2>
-<section id="about" class="container about">
-  <h2>Über mich</h2>
-  <div class="about-inner">
-    <img src="https://github.com/Oberndoerfer/smart-finance/blob/main/profil.jpg" alt="Mein Profilbild" class="profile-img">
-    <p>Kurzer Text über dich / deine Stärken / berufliches Ziel.</p>
-  </div>
+<!-- Bachelorarbeitsthemen -->
+<section id="bachelor" class="container">
+  <h2>Bachelorarbeitsthemen</h2>
+  <ul>
+    <li>Digitale Transformation im Bankenwesen</li>
+    <li>Einfluss von FinTechs auf die Privatkundenberatung</li>
+    <li>Nachhaltige Investitionsstrategien für KMU</li>
+    <li>Weitere Themen auf Anfrage</li>
+  </ul>
 </section>
 
-      <p>Kurzer Text über dich / dein Unternehmen. Ersetze diesen Platzhalter durch deine eigene Beschreibung.</p>
-    </section>
-    <!-- Lebenslauf-Sektion -->
-<section id="resume" class="container resume">
-  <h2>Mein Lebenslauf</h2>
-
-  <div class="timeline">
-
-    <!-- Berufserfahrung -->
-    <div class="timeline-item">
-      <div class="timeline-icon">💼</div>
-      <div class="timeline-content">
-        <h3>Professor und Studiengangleiter (fachübergreifned) im Studiengang BWL – Internationale Berufsakademie</h3>
-        <span class="date">2019 – heute</span>
-        <p>Vorlesungen in den Modulen Einführung in das Management, Nationale und Internationale Rechnungslegung, Finanzbuchhaltung, Kosten- und Leistungsrechnung, Systemisches Denken - Unternehmensplanspiel</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-icon">💼</div>
-      <div class="timeline-content">
-        <h3>Professor for Economics – George C. Marshall European Center for Security Studies</h3>
-        <span class="date">2021 – 2023</span>
-        <p>Professor für Finanzmarktregulierung und Kryptowährung</p>
-      </div>
-    </div>
-
-    <!-- Ausbildung -->
-    <div class="timeline-item">
-      <div class="timeline-icon">🎓</div>
-      <div class="timeline-content">
-        <h3>Promotion am Lehrstuhl für Finanzwirtschaft und Bankbetriebslehre – Technische Universität Chemnitz</h3>
-        <span class="date">2010 – 2014</span>
-      </div>
-    </div>
-
-  </div>
-
-    <section id="contact" class="container contact">
-      <h2>Kontakt</h2>
-      <!-- Option A: Formspree (empfohlen für statische Sites) -->
-      <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" novalidate>
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          E-Mail
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Nachricht
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-        <button type="submit" class="btn">Senden</button>
-        <p class="form-status" aria-live="polite"></p>
-      </form>
-
-      <p class="or">oder</p>
-
-      <!-- Option B: mailto fallback -->
-      <p>Schreiben Sie mir direkt: <a href="mailto:m.oberndoerfer@gmx.de">m.oberndoerfer@gmx.de</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> MeineSite — Alle Rechte vorbehalten.</p>
-    </div>
-    <section id="lebenslauf">
-  <p><strong></strong> Prof. Dr. Markus Oberndörfer</p>
+<!-- Vorschläge zur PKV -->
+<section id="pkv" class="container">
+  <h2>Vorschläge zur PKV</h2>
+  <p>Individuelle Vorschläge und Beratung zur privaten Krankenversicherung für Studierende und Berufseinsteiger. Detaillierte Informationen auf Anfrage.</p>
 </section>
 
-  </footer>
+<!-- Seminare & Vorträge -->
+<section id="seminare" class="container">
+  <h2>Seminare & Vorträge</h2>
+  <ul>
+    <li>Finanzplanung für Berufseinsteiger – 15.11.2025</li>
+    <li>Effiziente Kostenrechnung in Unternehmen – 10.12.2025</li>
+    <li>Unternehmensplanspiel: Systemisches Denken – Termine auf Anfrage</li>
+  </ul>
+</section>
 
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Private Altersvorsorge -->
+<section id="altersvorsorge" class="container">
+  <h2>Private Altersvorsorge</h2>
+  <p>Informationen, Tipps und Strategien für eine langfristige finanzielle Absicherung im Alter. Individuelle Beratung möglich.</p>
+</section>
